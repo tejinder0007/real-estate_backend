@@ -62,6 +62,10 @@ const startServer = async () => {
   try {
     await connectDB();
     await seedAdminUser(); 
+    app.get('/', (req, res) => {
+  res.send('Server is running! The backend is active.');
+});
+
     
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
