@@ -12,7 +12,11 @@ dotenv.config();
 const app = express();
 
 // --- Middleware ---
-app.use(cors());
+app.use(cors({
+    origin: ["http://localhost:5173", "https://https://real-estate-frontend-liard-rho.vercel.app"], // Add your frontend URLs here
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 app.use(express.json());
 
 // --- Define API Routes ---
