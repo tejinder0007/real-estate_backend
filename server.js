@@ -26,7 +26,7 @@ app.use('/api/appointments', require('./routes/appointments'));
 app.use('/api/admin', require('./routes/admin'));
 
 // --- Port Configuration ---
-const PORT = process.env.PORT || 8888;
+const PORT = process.env.PORT || "https://https://real-estate-backend-nine-eta.vercel.app";
 
 // --- Seed Admin User ---
 const seedAdminUser = async () => {
